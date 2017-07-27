@@ -2,7 +2,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageTargetFallback>net451;dotnet5.6;portable-net45+win8</PackageTargetFallback>
+    <VersionPrefix>0.1.0</VersionPrefix>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <PackageTags>Severino;Common;Helper</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/aldovrando-oliveira/Severino.Common.git</RepositoryUrl>
+    <AssemblyName>Severino.Common</AssemblyName>
+    <RootNamespace>Severino.Common</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="LightInject" Version="5.0.3"/>
   </ItemGroup>

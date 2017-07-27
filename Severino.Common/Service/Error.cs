@@ -14,20 +14,20 @@ namespace Severino.Common.Service
         }
 
         public Error(TypeError type, string message, string details)
-            :this(type, message)
+            : this(type, message)
         {
             if (string.IsNullOrEmpty(details) || string.IsNullOrWhiteSpace(details))
                 throw new ArgumentNullException(nameof(details));
-            
+
             Details = details;
         }
         public Error(TypeError type, string message, Exception exception)
-            :this(type, message)
+            : this(type, message)
         {
             Exception = exception ?? throw new ArgumentNullException(nameof(exception));
         }
         public Error(TypeError type, string message, string details, Exception exception)
-            :this(type, message, details)
+            : this(type, message, details)
         {
             Exception = exception ?? throw new ArgumentNullException(nameof(exception));
         }
@@ -41,6 +41,5 @@ namespace Severino.Common.Service
         {
             return $"{Message}. {Details}";
         }
-    }
     }
 }
