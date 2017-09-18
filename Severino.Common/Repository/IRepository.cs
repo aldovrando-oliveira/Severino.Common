@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Severino.Common.Domain;
 
@@ -6,7 +7,7 @@ namespace Severino.Common.Repository
     /// <summary>
     /// Contrato padrão para repositórios
     /// </summary>
-    public interface IRepository<T> where T : BaseEntity
+    public interface IRepository<T> : IDisposable where T : BaseEntity
     {
         /// <summary>
         /// Insere um novo item na base de dados

@@ -1,11 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Severino.Common.Repository
 {
     /// <summary>
     /// Contrato para utilização do padrão 'Unit of Work'
     /// </summary>
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         /// <summary>
         /// Realiza a consolidação das alterações no banco de dados
