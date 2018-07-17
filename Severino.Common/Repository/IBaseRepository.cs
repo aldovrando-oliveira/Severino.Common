@@ -7,7 +7,7 @@ namespace Severino.Common.Repository
     /// <summary>
     /// Contrato padrão para repositórios
     /// </summary>
-    public interface IRepository<T> : IDisposable where T : BaseEntity
+    public interface IBaseRepository<T> : IDisposable where T : BaseModel
     {
         /// <summary>
         /// Insere um novo item na base de dados
@@ -31,6 +31,7 @@ namespace Severino.Common.Repository
         /// Realiza a consulta de um item pelo identificador
         /// </summary>
         /// <param name="id">Identificador para a pesquisa</param>
-        Task<T> FindByIdAsync(long id);
+        /// <param name="expand">Indica se devem ser retornadas entidades filhas</param>
+        Task<T> GetByIdAsync(Guid id, bool expand);
     }
 }

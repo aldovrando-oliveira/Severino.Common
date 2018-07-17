@@ -11,6 +11,11 @@ namespace Severino.Common.Repository
         /// Informações de paginação
         /// </summary>
         PageRequest Page { get; set; }
+        
+        /// <summary>
+        /// Coleção com o resultado da consulta
+        /// </summary>
+        ICollection<object> Data { get; set; }
     }
 
     /// <summary>

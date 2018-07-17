@@ -40,7 +40,7 @@ namespace Severino.Common.Service
             if (Errors == null)
                 Errors = new List<Error>();
 
-            Error error = new Error(type, message);
+            var error = new Error(type, message);
 
             Errors.Add(error);
 
@@ -59,7 +59,7 @@ namespace Severino.Common.Service
             if (Errors == null)
                 Errors = new List<Error>();
 
-            Error error = new Error(type, message, details);
+            var error = new Error(type, message, details);
 
             Errors.Add(error);
 
@@ -78,7 +78,7 @@ namespace Severino.Common.Service
             if (Errors == null)
                 Errors = new List<Error>();
 
-            Error error = new Error(type, message, exception);
+            var error = new Error(type, message, exception);
 
             Errors.Add(error);
 
@@ -98,7 +98,7 @@ namespace Severino.Common.Service
             if (Errors == null)
                 Errors = new List<Error>();
 
-            Error error = new Error(type, message, details, exception);
+            var error = new Error(type, message, details, exception);
 
             Errors.Add(error);
 
@@ -111,10 +111,12 @@ namespace Severino.Common.Service
         /// <param name="errors">Celeção de erros a serem adicionados</param>
         public void AddErrors(ICollection<Error> errors)
         {
-            errors.ToList().ForEach((item) =>
+            void Action(Error item)
             {
                 AddError(item.Type, item.Details, item.Exception);
-            });
+            }
+
+            errors.ToList().ForEach(Action);
         }
     }
 }
