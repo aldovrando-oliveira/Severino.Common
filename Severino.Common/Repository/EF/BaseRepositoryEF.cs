@@ -16,6 +16,10 @@ namespace Severino.Common.Repository.EF
         where TContext : DbContext
     {
         private bool _disposed;
+
+        /// <summary>
+        /// Contexto de conexão com o banco de dados
+        /// </summary>
         protected TContext Context { get; }
 
         /// <summary>
@@ -97,6 +101,10 @@ namespace Severino.Common.Repository.EF
         /// <returns>Retorna a query expandida</returns>
         protected abstract IQueryable<TEntity> ExpandQuery(IQueryable<TEntity> query);
 
+        /// <summary>
+        /// Libera os recursos utilizados
+        /// </summary>
+        /// <param name="disposing">Indica se devem ser liberados os recursos gerenciados</param>
         protected virtual void Dispose(bool disposing)
         {
             if (_disposed)
@@ -110,6 +118,9 @@ namespace Severino.Common.Repository.EF
             _disposed = true;
         }
 
+        /// <summary>
+        /// Libera os recursos utilizados
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
