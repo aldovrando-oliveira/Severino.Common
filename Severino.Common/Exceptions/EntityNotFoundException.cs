@@ -29,6 +29,16 @@ namespace Severino.Common.Exceptions
         }
 
         /// <summary>
+        /// Método construtor
+        /// </summary>
+        /// <param name="type">Tipo da entidade não encontrada</param>
+        public EntityNotFoundException(Type type)
+            : base($"{type.GetType().Name} não encontrado")
+        {
+            Type = type;
+        }
+
+        /// <summary>
         /// Tipo do objeto que não foi encontrado
         /// </summary>
         public Type Type { get; }
