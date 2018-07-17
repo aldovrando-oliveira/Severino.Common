@@ -20,7 +20,7 @@ namespace Severino.Common.IoC
         /// Configura o container utilizando um callback
         /// </summary>
         /// <param name="action">Callback para registrar os objetos no container</param>
-        /// <exception cref="ArgumentNullException">Ocorre quando o argumento 'action' está nulo</Exception>
+        /// <exception cref="ArgumentNullException">Ocorre quando o argumento 'action' está nulo</exception>
         public static void Setup(Action<IServiceContainer> action)
         {
             if (action == null)

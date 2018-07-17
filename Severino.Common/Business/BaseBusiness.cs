@@ -16,6 +16,9 @@ namespace Severino.Common.Business
         where TEntity : BaseModel
         where TRepository : IBaseRepository<TEntity>
     {
+        /// <summary>
+        /// Repositório utilizado para acesso ao contexto do banco de dados
+        /// </summary>
         protected virtual TRepository Repository { get; }
 
         /// <summary>
