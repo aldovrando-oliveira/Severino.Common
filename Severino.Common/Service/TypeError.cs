@@ -1,4 +1,4 @@
-using Severino.Common.Attributes;
+using System.ComponentModel;
 
 namespace Severino.Common.Service
 {

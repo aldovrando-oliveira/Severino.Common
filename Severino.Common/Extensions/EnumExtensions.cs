@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using Severino.Common.Attributes;
 
 namespace Severino.Common.Extensions
 {
