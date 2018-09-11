@@ -3,3 +3,5 @@
 **/pack
 .vscode
 .idea
+**/package
+**.user
