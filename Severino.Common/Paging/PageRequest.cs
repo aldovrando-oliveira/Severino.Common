@@ -1,4 +1,4 @@
-namespace Severino.Common.Repository
+namespace Severino.Common.Paging
 {
     /// <summary>
     /// Classe com as informações de paginação para a realização da consulta

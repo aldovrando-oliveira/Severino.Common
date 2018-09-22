@@ -1,4 +1,4 @@
-namespace Severino.Common.Repository
+namespace Severino.Common.Paging
 {
     /// <summary>
     /// Enumerador com as opções de ordenação das consultas
